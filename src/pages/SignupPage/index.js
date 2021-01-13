@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { signup } from '../../services/userService';
 
 function SignupPage(props) {
     const [formState, setFormState] = useState(getInitialFormState());
@@ -20,12 +21,21 @@ function SignupPage(props) {
         }));
     }
 
-    function handleSubmit(event) {
-        event.preventDefault();
-        console.log('submitted form data: ', formState)
-        setFormState(getInitialFormState());
+    async function handleSubmit(event) {
+        try {
+            event.preventDefault();
 
-        props.history.push('/dahsboard');
+            await signup(formState
+                )
+            setFormState(getInitialFormState());
+
+            props.handleSignUpOrLogin();
+    
+            props.history.push('/dahsboard');
+            
+        } catch (error) {
+            alert(error.message);
+        }
     }
 
     return (
