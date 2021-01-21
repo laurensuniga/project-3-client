@@ -5,13 +5,16 @@ function setToken(token) {
         removeToken();
     }
 }
+
 function removeToken() {
     localStorage.removeItem('token');
 }
+
 function getUserFromToken() {
     const token = getToken();
     return token ? JSON.parse(atob(token.split('.')[1])).user : null;
 }
+
 function getToken() {
     const token = localStorage.getItem('token');
     if(token) {
@@ -23,6 +26,7 @@ function getToken() {
     }
     return token;
 }
+
 export {
     setToken,
     removeToken,

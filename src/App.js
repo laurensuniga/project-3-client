@@ -8,23 +8,22 @@ import styled from 'styled-components';
 
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Search from './components/Search';
+import AnimalCard from './components/AnimalCard';
 
 import HomePage from './pages/HomePage';
 import DashboardPage from './pages/HomePage';
 import SignupPage from './pages/SignupPage';
 import LoginPage from './pages/LoginPage';
 import DetailPage from './pages/DetailPage';
+import IndexPage from './pages/IndexPage';
 
 import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
 
 import './App.css';
+import { AnimalData } from '@petfinder/petfinder-js/dist/api/animalData';
 
-
-function App(props) {
-  
   const StyledLayout = styled.div`
-    display" flex;
+    display: flex;
     min-height: 100vh;
     flex-direction: column;
     main {
@@ -32,21 +31,23 @@ function App(props) {
     }
   `;
 
+function App(props) {
+
 
   const [ userState, setUserState ] = useState({
-    user: getUser()
+    user: getUser(),
   });
 
 
  async function getPetData(breed, limit) {
   try {
-    const data = await getSearchData(breed, limit);
-    // setUserState(data);
+    const { data } = await getSearchData(breed, limit);
     console.log(data)
   } catch (error) {
     console.log(error);
   }
 }
+
 
   useEffect(function() {
     getPetData();
@@ -68,6 +69,7 @@ function App(props) {
     props.history.push('/');
   }
 
+
   return (
     <StyledLayout>
 
@@ -76,7 +78,7 @@ function App(props) {
         <main>
           <Switch>
             <Route exact path="/" render={props => 
-              <HomePage />
+              <HomePage {...props} />
             } />
             <Route exact path="/dashboard" render={props => 
               userState.user ?
@@ -94,13 +96,12 @@ function App(props) {
             } />
             <Route exact path="/animals" 
             render={props => 
-            <DetailPage {...props} />} 
+            <IndexPage {...props} />} 
             />
             <Route exact path="/animals/:id" 
             render={props => 
             <DetailPage {...props} />} 
             />
-          <Search />
           </Switch>
         </main>
       <Footer />

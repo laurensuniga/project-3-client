@@ -9,9 +9,9 @@ function HomePage(props) {
     `;
     return (
         <StyledPage>
-            <h1>
-                HomePage
-            </h1>
+            {
+                
+            }
         </StyledPage>
     );
 }

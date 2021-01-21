@@ -1,5 +1,7 @@
 import styled from 'styled-components';
+import AnimalCard from '../../components/AnimalCard';
 
+function IndexPage(props) {
     const StyledPage = styled.main`
         display: flex;
         flex-direction: column;
@@ -7,15 +9,20 @@ import styled from 'styled-components';
         align-items: center;
     `;
 
-function DetailPage(props) {
+    let animals = props
+    console.log(animals)
+
     return (
         <StyledPage>
             <h1>
-                Detail Page
+                Index? Page
             </h1>
+            <AnimalCard />
+
         </StyledPage>
     );
 }
 
 
-export default DetailPage;
+
+export default IndexPage;

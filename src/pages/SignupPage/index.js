@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { signup } from '../../services/userService';
 
 function SignupPage(props) {
+    
     const [formState, setFormState] = useState(getInitialFormState());
 
     function getInitialFormState() {
@@ -41,24 +42,28 @@ function SignupPage(props) {
     return (
         <div className="Page">
             <form onSubmit={handleSubmit}>
+                First Name:
                 <input 
                 value={formState.firstName} 
                 onChange={handleChange} 
                 name="firstName" 
                 type="text" 
                 />
+                Last Name:
                 <input 
                 value={formState.lastName} 
                 onChange={handleChange} 
                 name="lastName" 
                 type="text" 
                 />
+                Email:
                 <input 
                 value={formState.email} 
                 onChange={handleChange} 
                 name="email" 
                 type="email" 
                 />
+                Password:
                 <input 
                 value={formState.password} 
                 onChange={handleChange} 
