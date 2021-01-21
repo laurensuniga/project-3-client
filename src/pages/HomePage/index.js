@@ -21,13 +21,9 @@ function HomePage(props) {
             <div>
                 <p>Welcome</p>
                 <p>to</p>
-                <p>Reject</p>
-                <p>Pets</p>
-
-{/* 
                 <p>Finding</p>
                 <p>Furry</p>
-                <p>Friends</p> */}
+                <p>Friends</p>
 
             {}
 
