@@ -3,10 +3,14 @@ import styled from 'styled-components';
 
 const StyledLayout = styled.main`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 35px;
+  justify-content: left;
+  flex-direction: column;
+  font-size: 45px;
   color: lightgray;
+  padding-left: 35px;
+  p {
+      font-family: 'Amatic SC', cursive;
+  }
 `;
 
 
@@ -15,8 +19,15 @@ function HomePage(props) {
     return (
         <StyledLayout>
             <div>
+                <p>Welcome</p>
+                <p>to</p>
+                <p>Reject</p>
+                <p>Pets</p>
 
-            Welcome to Finding Furry Friends
+{/* 
+                <p>Finding</p>
+                <p>Furry</p>
+                <p>Friends</p> */}
 
             {}
 
