@@ -14,22 +14,23 @@ import HomePage from './pages/HomePage';
 import DashboardPage from './pages/HomePage';
 import SignupPage from './pages/SignupPage';
 import LoginPage from './pages/LoginPage';
+import DetailPage from './pages/DetailPage';
 
 import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
 
 import './App.css';
 
 
-const StyledLayout = styled.div`
-  display" flex;
-  min-height: 100vh;
-  flex-direction: column;
-  main {
-    flex-grow: 1;
-  }
-`;
-
 function App(props) {
+  
+  const StyledLayout = styled.div`
+    display" flex;
+    min-height: 100vh;
+    flex-direction: column;
+    main {
+      flex-grow: 1;
+    }
+  `;
 
 
   const [ userState, setUserState ] = useState({
@@ -91,8 +92,16 @@ function App(props) {
               <LoginPage {...props} 
               handleSignUpOrLogin={handleSignUpOrLogin} />
             } />
-          </Switch>
+            <Route exact path="/animals" 
+            render={props => 
+            <DetailPage {...props} />} 
+            />
+            <Route exact path="/animals/:id" 
+            render={props => 
+            <DetailPage {...props} />} 
+            />
           <Search />
+          </Switch>
         </main>
       <Footer />
     </div>
