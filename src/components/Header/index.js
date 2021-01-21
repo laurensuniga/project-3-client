@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 
+
 function Header(props) {
     return (
         <header className={styles.Header}>
             <Link to="/">
-                <h1>Project 3</h1>
+                <h1>Reject Pets</h1>
             </Link>
             <nav>
                 <ul>
