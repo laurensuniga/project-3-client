@@ -5,7 +5,6 @@ function AnimalCard(props) {
         <div className="animals">
             <p>
                 {props.data}
-                hello
             </p>
         </div>
     )

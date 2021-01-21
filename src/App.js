@@ -22,14 +22,17 @@ import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
 import './App.css';
 import { AnimalData } from '@petfinder/petfinder-js/dist/api/animalData';
 
-  const StyledLayout = styled.div`
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    main {
-      flex-grow: 1;
-    }
-  `;
+const StyledLayout = styled.main`
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-image: url("/Feb2020Kodawg_9.jpeg");
+  background-size: cover;
+  main {
+    flex-grow: 1;
+  }
+`;
+
 
 function App(props) {
 

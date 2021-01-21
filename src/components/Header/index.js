@@ -6,7 +6,7 @@ function Header(props) {
     return (
         <header className={styles.Header}>
             <Link to="/">
-                <h1>Pets</h1>
+                <h1></h1>
             </Link>
             <nav>
                 <ul>

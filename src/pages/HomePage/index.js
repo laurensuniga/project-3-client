@@ -1,18 +1,27 @@
 import styled from 'styled-components';
 
+
+const StyledLayout = styled.main`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: lightgray;
+`;
+
+
 function HomePage(props) {
-    const StyledPage = styled.main`
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    `;
+
     return (
-        <StyledPage>
-            {
-                
-            }
-        </StyledPage>
+        <StyledLayout>
+            <div>
+
+            Welcome to Finding Furry Friends
+
+            {}
+
+            </div>
+        </StyledLayout>
     );
 }
 
