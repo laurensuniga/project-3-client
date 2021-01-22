@@ -10,6 +10,7 @@ const StyledLayout = styled.main`
   background-size: cover;
   color: white;
   justify-content: center;
+  
 `;
 
 
@@ -42,7 +43,7 @@ function LoginPage(props) {
 
             props.handleSignUpOrLogin();
     
-            props.history.push('/dahsboard');
+            props.history.push('/');
             
         } catch (error) {
             alert(error.message);

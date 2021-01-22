@@ -39,11 +39,16 @@ function App(props) {
     user: getUser(),
   });
 
+  const [ animalState, setAnimalState ] = useState({
+    animals: []
+  })
+
 
  async function getPetData(breed, limit) {
   try {
     const { data } = await getSearchData(breed, limit);
     console.log(data)
+    setAnimalState({ animals: data.animals })
   } catch (error) {
     console.log(error);
   }
@@ -95,10 +100,10 @@ function App(props) {
               <LoginPage {...props} 
               handleSignUpOrLogin={handleSignUpOrLogin} />
             } />
-            <Route exact path="/animals" 
+            { animalState.animals.length > 0 && <Route exact path="/animals" 
             render={props => 
-            <IndexPage {...props} />} 
-            />
+            <IndexPage {...props} animals={animalState.animals}/>} 
+            />}
             <Route exact path="/animals/:id" 
             render={props => 
             <DetailPage {...props} />} 
