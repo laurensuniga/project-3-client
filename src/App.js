@@ -26,8 +26,6 @@ const StyledLayout = styled.main`
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-image: url("/Feb2020Kodawg_9.jpeg");
-  background-size: cover;
   main {
     flex-grow: 1;
   }

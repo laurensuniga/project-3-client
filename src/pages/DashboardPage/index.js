@@ -3,7 +3,7 @@ function DashboardPage(props) {
     return (
 
             <h1>
-                Index? Page
+                Index Page
             </h1>
 
     );
