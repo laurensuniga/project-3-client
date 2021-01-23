@@ -1,8 +1,11 @@
 import AnimalCard from '../../components/AnimalCard';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import stockPhoto from '../../Images/noImage.png';
 
 const StyledLayout = styled.main`
     display: flex;
+    flex-wrap: wrap;
     min-height:100vh;
     background-color: #e8d1b5;
     background-size: cover;
@@ -15,6 +18,8 @@ function IndexPage(props) {
     let {animals} = props
     console.log(props)
 
+   
+
     return (
         <StyledLayout>
 
@@ -23,11 +28,12 @@ function IndexPage(props) {
                     Adoptable Furry Friends
                 </h1>
 
-                {props.animals.length > 0 && props.animals.map((animal) => {
+                {props.animals.length > 0 && props.animals.map((animal, id) => {
                     return (
-                        <div>
+                        <Link key={animal.id} to={{pathname: `/animals/${id}`, query: {animal: animal}}}>
                             <h2>{animal.name}</h2>
-                        </div>
+                            <img src={animal.photos.length > 0 ? animal.photos[0].small : stockPhoto}></img>
+                        </Link>
                     )
                 } 
 
