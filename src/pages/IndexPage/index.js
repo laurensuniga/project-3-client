@@ -1,11 +1,10 @@
-import AnimalCard from '../../components/AnimalCard';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import stockPhoto from '../../Images/noImage.png';
 
 const StyledLayout = styled.main`
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     min-height:100vh;
     background-color: #e8d1b5;
     background-size: cover;
