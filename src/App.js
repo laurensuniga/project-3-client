@@ -104,16 +104,16 @@ function App(props) {
             render={props => 
             <IndexPage {...props} animals={animalState.animals}/>} 
             />}
-            <Route exact path="/animals/:id" render={props => {
-            if(!props.location.query) {
-            props.location.query.animal = animalState.animals[props.match.params.id];
-            }
-            return <DetailPage {...props} />
-            }} />
-            {/* // <Route exact path="/animals/:id"  */}
-            {/* // render={props =>  */}
-            {/* // <DetailPage {...props} />}  */}
-            {/* // /> */}
+
+            <Route exact path="/animals/:id" render={props => 
+            <DetailPage {...props} animal={animalState.animals[props.match.params.id]}/>
+            }/>
+
+                {/* <Route exact path="/animals/:id" 
+              render={props => 
+              <DetailPage {...props} />}
+            />}         */}
+
           </Switch>
         </main>
       <Footer />
