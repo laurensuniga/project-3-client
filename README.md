@@ -5,11 +5,15 @@ Looking for a new furry conpanion to keep by your side? Look no further than Fin
 
 
 # Wireframes
-![](public/wireframes/Home%20page.png)
-![](public/wireframes/Index%20page.png)
-![](public/wireframes/Details%20page.png)
+![](public/images/wireframes/Home%20page.png)
+![](public/images/wireframes/Index%20page.png)
+![](public/images/wireframes/Details%20page.png)
 
 # Screen Shots
+![](public/images/screenshots/home%20page%20screen%20shot.png)
+![](public/images/screenshots/login%20page%20screen%20shot.png)
+![](public/images/screenshots/list%20screen%20shot.png)
+
 
 
 # Getting Started
