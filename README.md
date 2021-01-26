@@ -2,6 +2,10 @@
 Looking for a new furry conpanion to keep by your side? Look no further than Finding Furry Friends. This app was designed to help people take a look at all of the available animals out there that up for adoption.
 
 # Technolodies Used
+HTML
+CSS
+JavaScript
+React
 
 
 # Wireframes
