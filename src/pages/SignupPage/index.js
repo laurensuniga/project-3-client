@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 const StyledLayout = styled.main`
   display: flex;
+  justify-content: center;
   background-image: url("/P1020374.jpeg");
   background-size: cover;
   color: white;

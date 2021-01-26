@@ -7,6 +7,10 @@ const StyledLayout = styled.main`
     align-items: center;
     background: #e8d1b5;
     background-size: cover;
+    h1 {
+        display: flex;
+        justify-content: center;
+    }
 `;
 
 
